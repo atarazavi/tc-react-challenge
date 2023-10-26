@@ -1,36 +1,27 @@
-# TimeChimp React Coding Challenge 🎧
+# MachineTest
 
-## Setup 🚀
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.2.
 
-- Fork this repo
-- Install all dependencies using `npm install`
-- Run the app using `npm start`
+## Development server
 
-## Assessment 📖
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-Use the Spotify API to fetch and display the following items:
+## Code scaffolding
 
-- Fetch and display *Released This Week* songs
-  - Use the API path `new-releases`
-- Fetch and display *Featured Playlists*
-  - Use the API path `featured-playlists`
-- Fetch and display *Browse* genres
-  - Use the API path `categories`
-- Loading state/UI *(optional, current UX is already clean)*
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Think about 💡
+## Build
 
-- Taking a look at the Spotify API documentation
-- Do you resolve each API request one after the other or in parallel?
-- Where do you make the API requests?
-- Do you implement state management using something like Redux?
-- How much logic do you offload out of the UI components?
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-We don't want to restrict you too much so feel free to scope the project to your time and needs (usually it takes around 1-2 hours).
-However; make sure there is enough code (written by yourself) to explain your design and approach.
+## Running unit tests
 
-*Be creative, be awesome!*
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-### Questions or need some help with the setup?
+## Running end-to-end tests
 
-Please feel free to contact [Hidde Ottens](mailto:h.ottens@timechimp.com?subject=TimeChimp%20React%20Assessment)
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

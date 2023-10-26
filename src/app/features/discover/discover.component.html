@@ -1,0 +1,62 @@
+<div class="header">
+  <h1>Your favorite tunes</h1>
+  <h2>All ☀ and all 🌙</h2>
+</div>
+
+<section class="lists-container">
+  <h3>RELEASED THIS WEEK</h3>
+  <ng-container
+    *ngIf="newReleasesError$ | async as error; else successNewReleases"
+  >
+    <div class="error-message">Error loading new releases.</div>
+  </ng-container>
+  <ng-template #successNewReleases>
+    <app-new-releases
+      *ngIf="newReleases$ | async as newReleases; else loading"
+      [newReleases]="newReleases"
+      (loadNextPage)="loadNextPreviousNewReleases($event)"
+      (loadPreviousPage)="loadNextPreviousNewReleases($event)"
+    >
+      ></app-new-releases
+    >
+  </ng-template>
+</section>
+
+<section class="lists-container">
+  <h3>FEATURED PLAYLISTS</h3>
+  <ng-container
+    *ngIf="
+      featuredPlaylistsError$ | async as error;
+      else successFeaturedPlaylists
+    "
+  >
+    <div class="error-message">Error loading featured playlists.</div>
+  </ng-container>
+  <ng-template #successFeaturedPlaylists>
+    <app-featured-playlists
+      *ngIf="featuredPlaylists$ | async as featuredPlaylists; else loading"
+      [featuredPlaylists]="featuredPlaylists"
+    ></app-featured-playlists>
+  </ng-template>
+</section>
+
+<section class="lists-container">
+  <h3>BROWSE GENRES</h3>
+  <ng-container
+    *ngIf="browseGenresError$ | async as error; else successBrowseGenres"
+  >
+    <div class="error-message">Error loading genres.</div>
+  </ng-container>
+  <ng-template #successBrowseGenres>
+    <app-browse-genres
+      *ngIf="browseGenres$ | async as browseGenres; else loading"
+      [browseGenres]="browseGenres"
+    ></app-browse-genres>
+  </ng-template>
+</section>
+
+<ng-template #loading>
+  <div class="skeleton-loader">
+    <app-skeleton-loader [lineCount]="2"></app-skeleton-loader>
+  </div>
+</ng-template>

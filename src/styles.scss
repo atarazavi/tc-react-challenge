@@ -1,0 +1,45 @@
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+span.mat-mdc-list-item-unscoped-content.mdc-list-item__primary-text {
+  display: flex;
+  color: #ffffffb0;
+}
+app-carousel .items-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: white lightgray;
+  cursor: grab;
+
+  &.is-dragging {
+    cursor: grabbing;
+  }
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: lightgray;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 20px;
+    border: 3px solid lightgray;
+  }
+}
+app-not-found {
+  display: flex;
+  height: 90vh;
+}

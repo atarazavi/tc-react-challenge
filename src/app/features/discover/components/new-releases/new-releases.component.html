@@ -1,0 +1,20 @@
+<div class="navigation-container">
+  <button
+    mat-icon-button
+    (click)="onPreviousPageClick()"
+    [disabled]="!_newReleases.value?.albums?.previous"
+  >
+    <mat-icon>arrow_back_ios</mat-icon>
+  </button>
+  <button
+    mat-icon-button
+    (click)="onNextPageClick()"
+    [disabled]="!_newReleases.value?.albums?.next"
+  >
+    <mat-icon>arrow_forward_ios</mat-icon>
+  </button>
+</div>
+
+<div class="carousel-container">
+  <app-carousel [toBeListedArray]="toBeListedArray$ | async"></app-carousel>
+</div>

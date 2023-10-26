@@ -1,0 +1,14 @@
+<div
+  class="items-container"
+  #carouselContainer
+  (mousedown)="onMouseDown($event)"
+  (mouseup)="onMouseUp()"
+  (mousemove)="onMouseMove($event, carouselContainer)"
+  (mouseleave)="onMouseUp()"
+>
+  <div *ngFor="let item of toBeListedArray" class="album">
+    <img [src]="item.imageUrl" alt="{{ item.name }}" />
+    <h3>{{ item.name }}</h3>
+    <p>{{ item.artistName }}</p>
+  </div>
+</div>

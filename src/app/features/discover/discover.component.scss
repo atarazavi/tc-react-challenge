@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffc0cb; // Pink background for demonstration
+  padding: 20px 0; // Vertical padding
+  margin-bottom: 30px; // Space below the header
+
+  h1 {
+    color: #f06292; // Adjust as necessary
+    font-size: 32px;
+    margin-bottom: 10px; // Spacing between the two headers
+  }
+
+  h2 {
+    color: #ba68c8; // Adjust as necessary
+    font-size: 24px;
+  }
+}
+.lists-container {
+  h3 {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #f06292;
+  }
+}
+section {
+  padding: 1rem;
+}
